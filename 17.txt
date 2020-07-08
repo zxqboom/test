@@ -1,0 +1,55 @@
+#创建set
+>>> s1 = set("qiwsir")  #集合中元素不能重复。
+>>> s1  
+
+>>> s2 = set([123,"google","face","book","facebook","book"])
+>>> s2
+
+>>> s3 = {"facebook",123}       #通过{}直接创建
+>>> s3
+
+#set的方法
+#add,update
+>>> a_set = {'a','i'}       #建立 set 
+>>> type(a_set)
+
+>>> a_set.add("qiwsir")     #增加一个元素
+>>> a_set                   #原处修改,即原来的 a_set 引用对象已经改变
+
+>>> b_set = set("python")
+>>> type(b_set)
+>>> b_set
+>>> b_set.add("qiwsir")
+>>> b_set
+
+>>> b_set.add([1,2,3])      #报错.list 是不可哈希的，集合中的元素应该是 hashable 类型。
+
+>>> b_set.add('[1,2,3]')    #可以这样!
+>>> b_set
+
+#从另外一个 set 中合并过来元素,方法是 set.update(s2)
+>>> s1
+>>> s2
+>>> s1.update(s2)       #把 s2 的元素并入到 s1 中.
+>>> s1                  #s1 的引用对象修改
+>>> s2                  #s2 的未变
+
+
+#pop, remove, discard, clear
+>>> b_set
+>>> b_set.pop()     #从 set 中任意选一个删除,并返回该值
+>>> b_set.pop()
+>>> b_set.pop()
+>>> b_set
+
+>>> a_set.discard('a')
+>>> a_set     
+>>> a_set.discard('b')
+
+>>> a_set
+>>> a_set.clear()
+>>> a_set
+>>> bool(a_set)     #空了,bool 一下返回 False.
+
+
+

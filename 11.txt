@@ -1,0 +1,51 @@
+>>> la
+>>> lb
+>>> la.extend(lb)
+>>> la
+>>> lb
+
+#对象能否迭代
+>>> astr = "Python"
+>>> hasattr(astr,'__iter__')
+
+>>> alst = [1,2]
+>>> hasattr(alst,'__iter__')
+>>> hasattr(3, '__iter__')
+
+>>> new = [1,2,3]
+>>> lst = ['Python','qiwsir']
+>>> lst.extend(new)
+>>> lst
+>>> new
+
+#对于 extend()，提供的不是 iterable 类型对象，
+>>> lst.extend("itdiffer")
+>>> lst
+
+>>> one = ["good","good","study"]
+>>> another = one.extend(["day","day","up"])    #对于没有提供返回值的函数，如果要这样，结果是：
+>>> another                                     #这样的，什么也没有得到。
+>>> one
+
+#append与extend的区别
+>>> lst = [1,2,3]
+>>> lst.append(["qiwsir","github"])
+>>> lst#append 的结果
+>>> len(lst)
+
+>>> lst2 = [1,2,3]
+>>> lst2.extend(["qiwsir","github"])
+>>> lst2 #extend 的结果
+>>> len(lst2)
+#append 是整建制地追加，extend 是个体化扩编。
+
+#数一数某个元素在该 list 中出现多少次
+>>> la = [1,2,1,1,3]
+>>> la.count(1)
+>>> la.append('a')
+>>> la.append('a')
+>>> la
+>>> la.count('a')
+>>> la.count(2)
+>>> la.count(5)     #NOTE:la 中没有 5,但是如果用这种方法找，不报错，返回的是数字 0
+

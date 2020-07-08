@@ -1,0 +1,53 @@
+#还有一种集合，不能在原处修改。这种集合的创建方法是用 frozenset()
+>>> f_set = frozenset("qiwsir")
+>>> f_set
+
+>>> a_set = set("github")           #对比看一看，这是一个可以原处修改的 set
+>>> a_set
+>>> a_set.add("python")
+>>> a_set
+
+#元素与集合的关系
+>>> aset
+>>> "a" in aset
+>>> "h" in aset
+
+#集合与集合的关系
+>>> a           
+>>> b
+>>> a == b
+>>> a != b
+
+#判断集合 A 是否是集合 B 的子集，可以使用 A<B，返回 true 则是子集，否则不是。另外，还可以使用函数 A.issubset(B)判断。
+>>> a
+>>> c
+>>> c<a     #c 是 a 的子集
+>>> c.issubset(a)   #或者用这种方法，判断 c 是否是 a 的子集
+>>> a.issuperset(c) #判断 a 是否是 c 的超集
+
+>>> b
+>>> a<b     #a 不是 b 的子集
+>>> a.issubset(b)   #或者这样做
+
+#并集
+>>> a
+>>> b
+>>> a | b                       #可以有两种方式，结果一样
+>>> a.union(b)#法二
+
+#交集
+>>> a
+>>> b
+>>> a & b       #两种方式，等价
+>>> a.intersection(b)
+
+#A 相对 B 的差（补），即 A 相对 B 不同的部分元素
+>>> a
+>>> b
+>>> a - b
+>>> a.difference(b)
+
+#A、B 的对称差集
+>>> a
+>>> b
+>>> a.symmetric_difference(b)

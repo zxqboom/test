@@ -1,0 +1,29 @@
+#打印字符串
+
+>>> print "good good study, day day up"
+>>> print "----good---study---day----up"
+
+#避免出现三个'的两种解决方法
+>>> "What's your name?"
+>>> 'What\'s your name?'#使用转义符
+
+#变量和字符串
+>>> b = "hello,world"
+>>> b
+>>> print b
+
+#拼接字符串
+>>> "Py" + "thon"
+
+>>> a = 1989
+>>> b = "free"
+>>> print b+`a`#python3中为print (b+`a`) 注意不是单引号 换成>>> print b + str(a) 或>>> print b + repr(a) 
+
+#将字符串对象转换为整数对象
+>>> a = "250"
+>>> type(a)
+>>> b = int(a)
+>>> b
+
+
+>>> type(b)

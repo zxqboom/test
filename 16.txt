@@ -1,0 +1,125 @@
+#copy
+>>> a = 5
+>>> b = a
+>>> b
+
+>>> ad = {"name":"qiwsir", "lang":"Python"}
+>>> bd = ad
+>>> bd
+
+#copy方法
+>>> cd = ad.copy()#在内存中另辟了一个空间
+>>> cd
+
+>>> cd["name"] = "itdiffer.com"
+>>> cd
+>>> ad
+
+>>> bd
+>>> bd["name"] = "laoqi"
+>>> ad
+>>> bd
+
+
+
+>>> x = {"name":"qiwsir", "lang":["Python", "java", "c"]}
+>>> y = x.copy()
+>>> y
+
+>>> id(x)
+>>> id(y)
+
+>>> y["lang"].remove("c")
+
+>>> y["name"] = "laoqi"
+>>> y
+>>> x
+
+#深拷贝
+>>> import copy
+>>> z = copy.deepcopy(x)
+>>> z
+
+>>> x
+>>> x["lang"].remove("java")
+>>> x
+>>> z
+
+>>> x["lang"].append("c++")
+>>> x
+
+
+#clear
+#清空字典中所有元素
+>>> a = {"name":"qiwsir"}
+>>> a.clear()
+>>> a
+
+#get,setdefault
+>>> d
+>>> d.get("lang")#dict.get()就是要得到字典中某个键的值
+
+>>> print d.get("name")
+>>> d["name"]
+
+>>> d = {"lang":"Python"}
+>>> newd = d.get("name",'qiwsir')
+>>> newd
+>>> d
+
+#setdefault
+>>> d
+>>> d.setdefault("lang")
+
+>>> d.setdefault("name","qiwsir")
+>>> d
+#没有"name"这个键，于是返回 d.setdefault("name","qiwsir")指定的值"qiwsir"，并且将键值对'name':"qiwsir"添加到原来的字典中
+
+>>> d.setdefault("web")
+
+
+#items/iteritems, keys/iterkeys, values/itervalues
+>>> dd = {"name":"qiwsir", "lang":"python", "web":"www.itdiffer.com"}
+>>> dd_kv = dd.items()#D.items()能够得到一个关于字典的列表
+>>> dd_kv
+
+>>> dd
+>>> dd_iter = dd.iteritems()
+>>> type(dd_iter)
+>>> dd_iter
+>>> list(dd_iter)
+
+>>> dd
+>>> dd.keys()
+>>> dd.values()
+
+
+#pop, popitem
+>>> dd
+>>> dd.pop("name")#pop 函数中的参数是不能省略的
+>>> dd
+
+>>> dd
+>>> dd.popitem()#随机删除一个，并将所删除的返回
+>>> dd
+
+
+#update
+>>> d1 = {"lang":"python"}
+>>> d2 = {"song":"I dreamed a dream"}
+>>> d1.update(d2)#就把字典 d2 更新入了字典 d1
+>>> d1
+>>> d2
+
+#另一种更新方法
+>>> d2
+>>> d2.update([("name","qiwsir"), ("web","itdiffer.com")])
+>>> d2
+
+
+#has_key  判断字典中是否存在某个键
+>>> d2
+>>> d2.has_key("web")
+>>> "web" in d2
+
+

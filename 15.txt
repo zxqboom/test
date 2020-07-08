@@ -1,0 +1,65 @@
+#字典
+
+ citys = ["suzhou", "tangshan", "beijing", "shanghai"]
+ city_codes = ["0512", "0315", "011", "012"]
+
+ print "{} : {}".format(citys[0], city_codes[0])
+
+#创建dict
+#法一：
+>>> mydict = {}
+>>> mydict
+>>> person = {"name":"qiwsir","site":"qiwsir.github.io","language":"python"}
+>>> person
+>>> person['name2']="qiwsir"    #这是一种向 dict 中增加键值对的方法
+>>> person
+
+#法二：利用元组在建构字典
+>>> name = (["first","Google"],["second","Yahoo"])      
+>>> website = dict(name)
+>>> website
+#或
+>>> ad = dict(name="qiwsir", age=42)
+>>> ad
+#或
+>>> website = {}.fromkeys(("third","forth"),"facebook")
+>>> website
+
+
+#访问dict值
+>>> person
+>>> person['name']
+>>> person['language']
+
+>>> city_code = {"suzhou":"0512", "tangshan":"0315", "beijing":"011", "shanghai":"012"}
+>>> print city_code["suzhou"]
+
+
+#基本操作
+>>> city_code
+>>> len(city_code)
+
+#增加一项
+>>> city_code["nanjing"] = "025"
+>>> city_code
+#修改一项
+>>> city_code["beijing"] = "010"
+>>> city_code
+#删除一项
+>>> city_code["shanghai"]
+>>> del city_code["shanghai"]
+
+
+#字符串格式化输出
+>>> city_code = {"suzhou":"0512", "tangshan":"0315", "hangzhou":"0571"}
+>>> " Suzhou is a beautiful city, its area code is %(suzhou)s" % city_code
+
+#模板
+>>> temp = "<html><head><title>%(lang)s<title><body><p>My name is %(name)s.</p></body></head></html>"
+>>> my = {"name":"qiwsir", "lang":"python"}
+>>> temp % my
+
+
+
+
+

@@ -1,0 +1,64 @@
+#insert
+>>> all_users = ["qiwsir","github"]
+>>> all_users.insert(0,"python")
+>>> all_users
+>>> all_users.insert(1,"http://")
+>>> all_users
+
+>>> a = [1,2,3]
+>>> a.insert(9,777)
+>>> a
+
+#pop和remove
+>>> all_users
+>>> all_users.remove("http://")
+>>> all_users       #的确是把"http://"删除了
+
+>>> lst = ["python","java","python","c"]
+>>> lst.remove("python")
+>>> lst#只能删第一个python
+
+>>> all_users
+>>> "Python" in all_users       #这里用 in 来判断一个元素是否在 list中，在则返回 True，否则返回False
+>>> if "Python" in all_users:
+...     all_users.remove("python")
+...     print all_users
+... else:
+...     print "'Python' is not in all_users"
+... #删除了"Python"元素
+
+>>> if "Python" in all_users:
+...     all_users.remove("Python")
+...     print all_users
+... else:
+...     print "'Python' is not in all_users"
+... #因为已经删除了，所以就没有了。
+
+
+
+#pop
+>>> all_users
+>>> all_users.pop()     #list.pop([i]),圆括号里面是[i]，表示这个序号是可选的
+                                     ##如果不写，就默认删除最后一个，并且将该结果返回
+>>> all_users
+>>> all_users.pop(1)   #指定删除编号为 1 的元素"github"
+
+>>> all_users
+>>> all_users.pop()
+
+
+
+#reverse把列表的元素顺序反过来
+>>> a = [3,5,1,6]
+>>> a.reverse()
+>>> a
+
+#sort 是对列表进行排序 默认情况，实现的是从小到大的排序。
+>>> a.sort(reverse=True)
+>>> a#从大到小
+
+#设置按照哪个关键字进行排序：以字符串的长度为关键词进行排序
+>>> lst = ["Python","java","c","pascal","basic"]
+>>> lst.sort(key=len)
+>>> lst
+

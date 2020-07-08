@@ -1,0 +1,90 @@
+#字符串格式化输出
+
+>>> "I like %s"
+#s是一个占位符，可以被其它的字符串代替。
+
+>>> "I like %s" % "python"
+>>> "I like %s" % "Pascal"
+
+>>> a = "%d years" % 15
+>>> print a
+
+>>> print "Suzhou is more than %d years. %s lives in here." % (2500, "qiwsir")
+
+#对于浮点数字的打印输出，还可以限定输出的小数位数和其它样式。
+>>> print "Today's temperature is %.2f" % 12.235
+>>> print "Today's temperature is %+.2f" % 12.235
+
+#新的格式化方法
+#string.format()的格式化方法，其中 {} 作为占位符。
+>>> s1 = "I like {}".format("python")
+>>> s1
+>>> s2 = "Suzhou is more than {} years. {} lives in here.".format(2500, "qiwsir") 
+>>> s2
+
+#分割 将字符串根据某个分割符进行分割。
+>>> a = "I LOVE PYTHON"
+>>> a.split(" ")#用空格作为分割
+
+>>> b = "www.itdiffer.com"
+>>> b.split(".")
+
+
+#去掉字符串两头的空格
+>>> b=" hello "    # 两边有空格
+>>> b.strip()
+>>> b
+
+>>> b.lstrip()    # 去掉左边的空格
+>>> b.rstrip()    # 去掉右边的空格
+
+
+#字符大小写的转换
+
+>>> a = "qiwsir,Python" 
+>>> a.upper()       # 将小写字母完全变成大写字母
+>>> a               # 原数据对象并没有改变
+>>> b = a.upper()
+>>> b
+>>> c = b.lower()   # 将所有的小写字母变成大写字母
+
+>>> a
+>>> a.capitalize()  # 把字符串的第一个字母变成大写
+>>> a               # 原数据对象没有改变
+>>> b = a.capitalize() # 新建立了一个
+>>> b
+
+>>> a = "qiwsir,github"
+>>> a.istitle()# 判断每个单词的第一个字母是否为大写
+>>> a = "QIWSIR"        # 当全是大写的时候，返回 False
+>>> a.istitle()
+>>> a = "qIWSIR"
+>>> a.istitle()
+>>> a = "Qiwsir,github"  # 如果这样，也返回 False
+>>> a.istitle()
+>>> a = "Qiwsir"        # 这样是 True
+>>> a.istitle()
+>>> a = 'Qiwsir,Github' # 这样也是 True
+>>> a.istitle()
+
+>>> a = "Qiwsir"
+>>> a.isupper()
+>>> a.upper().isupper()
+>>> a.islower()
+>>> a.lower().islower()
+
+>>> a = "This is a Book"
+>>> a.istitle()
+>>> b = a.title()     # 这样就把所有单词的第一个字母转化为大写
+>>> b
+>>> b.istitle()       # 判断每个单词的第一个字母是否为大写
+
+
+
+#join拼接字符串
+
+>>> b
+>>> c = b.split(".")
+>>> c
+>>> ".".join(c)
+>>> "*".join(c)

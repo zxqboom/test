@@ -1,0 +1,22 @@
+>>> line = "Hello.I am qiwsir.Welcome you." 
+
+>>> line.split(".")     #以英文的句点为分隔符，得到 list
+>>> line.split(".",1)   #这个 1,就是表达了上文中的：If maxsplit is given, at most maxsplit splits are done.
+>>> name = "Albert Ainstain"    #也有可能用空格来做为分隔符
+>>> name.split(" ")
+
+
+>>> s = "I am, writing\npython\tbook on line"   #这个字符串中有空格，逗号，换行\n，tab 缩进\t 符号
+>>> print s         #输出之后的样式
+>>> s.split()       #用 split(),但是括号中不输入任何参数，见到任何分割符号，就用其分割了
+
+#join 可以说是 split 的逆运算
+>>> name
+>>> "".join(name)   #将 list 中的元素连接起来，但是没有连接符，表示一个一个紧邻着
+>>> ".".join(name)  #以英文的句点做为连接分隔符
+>>> " ".join(name)  #以空格做为连接的分隔符
+
+>>> s = "I am, writing\npython\tbook on line" 
+>>> print s
+>>> s.split()
+>>> " ".join(s.split())         #重新连接，不过有一点遗憾，am 后面逗号还是有的。怎么去掉？

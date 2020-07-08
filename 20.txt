@@ -1,0 +1,32 @@
+#语句1
+#print
+>>> print "hello, world"
+>>> print "hello","world"
+
+#区别
+>>> for i in [1,2,3,4,5]:
+...     print i
+
+>>> for i in [1,2,3,4,5]:
+...     print i ,#打印出来的在一行
+
+#import
+>>> import math
+>>> math.pow(3,2)
+
+>>> from math import pow
+>>> pow(3,2)
+
+>>> from math import pow as pingfang
+>>> pingfang(3,2)
+
+#引入多个函数
+>>> from math import pow, e, pi
+>>> pow(e,pi)
+
+
+#赋值语句
+>>> x, y, z = 1, "python", ["hello", "world"]
+
+#把几个值赋给一个
+>>> a = "itdiffer.com", "python"
