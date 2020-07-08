@@ -3,9 +3,9 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-list = [1,2,3,4,5,6,7,8,9,0]
-print raw
+opponents = [1,2,3,4,5,6,7,8,9,0]
+print opponents
 
-b = list.pop(0)
-list.append(b)
-print list
+b = opponents.pop(0)
+opponents.append(b)
+print opponents
