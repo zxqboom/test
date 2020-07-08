@@ -1,8 +1,8 @@
 #!/usr/bin/env Python
 # coding=utf-8
 
-string = "I love  python."    
-print string               
+str_ = "I love  python."    
+print str_               
 
 str_lst = string.split(" ")    
 print str_lst
